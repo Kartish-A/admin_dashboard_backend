@@ -38,9 +38,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 
 /* ROUTES */
-app.get("/", (req, res) => {
-  res.send("Hello, World!"); // You can customize the response here
-});
+// app.get("/", (req, res) => {
+//   res.send("Hello, World!"); // You can customize the response here
+// });
 
 app.use("/client", clientRoutes);
 app.use("/general", generalRoutes);
