@@ -5,6 +5,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import helmet from "helmet";
 import morgan from "morgan";
+
 import clientRoutes from "./routes/client.js";
 import generalRoutes from "./routes/general.js";
 import managementRoutes from "./routes/management.js";
@@ -48,7 +49,7 @@ app.use("/management", managementRoutes);
 app.use("/sales", salesRoutes);
 
 /* MONGOOSE SETUP */
-const PORT = process.env.PORT || 9000;
+const PORT = process.env.PORT || 5001;
 mongoose
   .connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
